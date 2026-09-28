@@ -17,59 +17,7 @@ The study is part of a six-student research cluster. All six topics study the sa
 
 ---
 
-## Project Structure
 
-```
-thesis-coding-agent-adoption/
-│
-├── README.md                  ← this file
-│
-├── scripts/                   ← data collection pipeline
-│   ├── stage1/                ← global JS/TS corpus construction
-│   │   ├── stage1_corpus_build.py       (REST version, slow but thorough)
-│   │   └── stage1_fast_graphql.py       (GraphQL batch version — recommended)
-│   │
-│   ├── stage2/                ← Egyptian developer corpus
-│   │   ├── stage2a_egypt_seed_discovery_v2.py   (seed account discovery)
-│   │   ├── Stage2b_snowball_expansion.py         (network expansion)
-│   │   ├── stage2c_fast_graphql.py               (repo pull — recommended)
-│   │   ├── Stage2c_egypt_corpus_direct_pull.py   (REST fallback)
-│   │   └── combine_accounts.py                   (merge 2a + 2b outputs)
-│   │
-│   └── stage3/                ← merge both corpora
-│       └── stage3_merge_corpora.py
-│
-├── data/                      ← all CSV and log outputs
-│   ├── base_jsts_corpus_pilot.csv       (Stage 1 output — 4,372 repos)
-│   ├── egypt_seed_candidates.csv        (Stage 2a output — 1,876 accounts)
-│   ├── egypt_snowball_candidates.csv    (Stage 2b output — 19,347 accounts)
-│   ├── egypt_combined_accounts.csv      (Stage 2a+2b merged — 21,223 accounts)
-│   ├── egypt_corpus.csv                 (Stage 2c output — 72,946 repos)
-│   ├── unified_corpus.csv               (Stage 3 output — 77,315 repos)
-│   ├── filter_audit.csv                 (per-repo filter pass/fail log)
-│   └── pull_log.jsonl                   (every API call logged)
-│
-├── docs/                      ← documentation and reference material
-│   ├── METHODOLOGY.md                   (full 7-stage thesis methodology)
-│   ├── SHARED_CORPUS_REPORT.md          (shared cluster methodology — supervisor-facing)
-│   ├── SHARED_CORPUS_METHODOLOGY.md     (technical internal version)
-│   ├── EXPLORATORY_API_TASK.md          (GitHub API exploration findings)
-│   ├── SCRIPTS_REFERENCE.md             (per-script documentation)
-│   ├── PAPER_NOTES.md                   (notes on the two professor papers)
-│   ├── THESIS_OBSERVATIONS.md           (ongoing findings and draft passages)
-│   │
-│   └── [PDF reference materials]
-│       ├── Agentic Much? ...pdf
-│       ├── Agentic Very Much! ...pdf
-│       ├── ResearchMethods.pdf
-│       ├── Agent_Skills_Research_Methodology.pdf
-│       ├── Thesis Proposal.pdf
-│       └── Draft For Interim.pdf
-│
-└── venv/                      ← Python virtual environment (not committed)
-```
-
----
 
 ## Pipeline Overview
 
@@ -177,15 +125,11 @@ python3 stage3_merge_corpora.py
 
 ## Shared Methodology
 
-This thesis is one of six in a research cluster. The shared methodology — covering repository filtering rules, Egyptian developer discovery pipeline, detection signals, and metric definitions — is documented in:
+This thesis is one of six in a research cluster. The shared methodology — covering repository filtering rules, Egyptian developer discovery pipeline, detection signals, and metric definitions.
 
-- `docs/SHARED_CORPUS_REPORT.md` — supervisor-facing summary
-- `docs/SHARED_CORPUS_METHODOLOGY.md` — full technical reference
+
 
 The only differences between topics are the target programming language, the ecosystem manifest file checked, and any ecosystem-specific dependency signals.
 
 ---
 
-## Contact
-
-Manuel Youssef Haik Kevorkian — Topic 2: JavaScript/TypeScript/npm
