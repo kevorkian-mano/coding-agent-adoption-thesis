@@ -1,15 +1,14 @@
-# Coding Agent Adoption in JavaScript / TypeScript / npm
-### Bachelor's Thesis — Topic 2
-**Student:** Manuel Youssef Haik Kevorkian  
-**Study snapshot date:** 2026-09-01  
+# Coding Agent Adoption
+### Bachelor's Thesis 
+
 
 ---
 
 ## What This Thesis Is About
 
-This thesis investigates how coding agents (GitHub Copilot, Cursor, Claude Code, and similar AI-assisted development tools) are being adopted on GitHub, with a focus on the JavaScript/TypeScript/npm ecosystem and on Egyptian developers specifically.
+This thesis investigates how coding agents (GitHub Copilot, Cursor, Claude Code, and similar AI-assisted development tools) are being adopted on GitHub, with a focus on the Egyptian developers specifically.
 
-Two research questions drive the study:
+Two research questions drive the study(For: JS/TS/npm):
 
 - **RQ1 — Adoption rate:** What proportion of active JS/TS repositories show evidence of coding agent use? How does adoption vary by project visibility (star stratum) and over time?
 - **RQ2 — Impact:** Does the introduction of a coding agent measurably change repository activity — commit frequency, PR merge time, contributor growth, code churn?
